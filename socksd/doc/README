@@ -1,4 +1,12 @@
 Simple socks4 implementation
 ============================
 
-It supports...
+Feature list:
+ - Uses pthreads for every connection.
+ - It hides their port param at "ps aux"
+ - Static compilation using dietlibc
+ - Compression and password protection using elfuck
+ - Dynamic compilation using the system's glibc
+
+Execution example:
+ ./socksd 9999

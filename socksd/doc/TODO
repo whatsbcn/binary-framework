@@ -1,0 +1,3 @@
+ - Be sure that the threads are not sharing more resources that the essential ones.
+ - Implement de bind command
+ - Win32 compilation
