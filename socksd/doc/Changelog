@@ -1,0 +1,2 @@
+= Changes up to 0.1 =
+ * Removed errno code in pthreaded code
