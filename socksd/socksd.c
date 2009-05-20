@@ -51,9 +51,16 @@ void print_message(struct message *m) {
 #if DEBUG
     struct in_addr in;
     in.s_addr = m->dstip;
-	debug("SOCKSv%d ", m->vn);
+
     if (m->cd == 1) {
-	    debug("CONNECT to %s:%d\n", inet_ntoa(in), ntohs(m->dstport));
+		if (strstr(inet_ntoa(in),"0.0.0.")) {
+			debug("SOCKSv%da ", m->vn);
+	    	debug("CONNECT to %s:%d\n", inet_ntoa(in), ntohs(m->dstport));
+		}
+		else {
+			debug("SOCKSv%d ", m->vn);
+	    	debug("CONNECT to %s:%d\n", inet_ntoa(in), ntohs(m->dstport));
+		}
     } else if (m->cd == 2) {
 	    debug("BIND %s:%d\n", inet_ntoa(in), ntohs(m->dstport));
     } else {
@@ -120,12 +127,27 @@ void socks_forward(int sock1, int sock2) {
 
 void *pthread_socks(void *sock) {
 	struct message req;
+	struct in_addr in;
+
 	read((int)sock, &req, sizeof(struct message));
 	char buf[4];
 	read((int)sock, buf, 4);
 	print_message(&req);
 	//debug("USERID: %s\n", buf);
 
+	in.s_addr = req.dstip;
+	if (strstr(inet_ntoa(in),"0.0.0.")) {
+		char dstip4a[1024];
+		struct in_addr **addr_ptr;		
+
+		read((int)sock, dstip4a, 1024);
+
+		struct hostent *host;
+		host = gethostbyname(dstip4a);
+		addr_ptr = (struct in_addr **)(host->h_addr_list);
+		
+		req.dstip = addr_ptr[0]->s_addr;
+	}
 	int sock2;
 	if ((sock2 = launcher_rcon(req.dstip, req.dstport)) > 0) {
 		debug("Connected!\n");
