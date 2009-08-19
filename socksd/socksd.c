@@ -24,6 +24,10 @@ struct message {
 	unsigned int dstip;
 };
 
+struct pthread_param {
+	int sock;
+};
+
 // Debug function
 __inline__ void debug(char * format, ...){
 #if DEBUG
@@ -53,6 +57,7 @@ void print_message(struct message *m) {
     in.s_addr = m->dstip;
 
     if (m->cd == 1) {
+		//TODO: Check for another invalid IPs
 		if (strstr(inet_ntoa(in),"0.0.0.")) {
 			debug("SOCKSv%da ", m->vn);
 	    	debug("CONNECT to %s:%d\n", inet_ntoa(in), ntohs(m->dstport));
@@ -108,34 +113,33 @@ void socks_forward(int sock1, int sock2) {
 
         if (select(max(sock1, sock2)  + 1, &fds, NULL, NULL, NULL) < 0 ) break;
 
-        /* stdin => shell */
         if (FD_ISSET(sock1, &fds)) {
             count = read(sock1, buf, BUFSIZE);
             if ((count <= 0)) break;
             if (write(sock2, buf, count) <= 0) break;    
-            /* shell => stdout */
         } 
 	
 		if (FD_ISSET(sock2, &fds)) {
             count = read(sock2, buf, BUFSIZE);
-            // TODO: enviar char especial per setejar tamany tty, timeout, etc.
             if ((count <= 0)) break;
             else if (write(sock1, buf, count) <= 0) break;
         }
     }
 }
 
-void *pthread_socks(void *sock) {
+void *pthread_socks(struct pthread_param *pparam) {
 	struct message req;
 	struct in_addr in;
+	int sock = pparam->sock;
 
-	read((int)sock, &req, sizeof(struct message));
+	read(sock, &req, sizeof(struct message));
 	char buf[4];
 	read((int)sock, buf, 4);
 	print_message(&req);
 	//debug("USERID: %s\n", buf);
 
 	in.s_addr = req.dstip;
+	//TODO: Check for another invalid IPs
 	if (strstr(inet_ntoa(in),"0.0.0.")) {
 		char dstip4a[1024];
 		struct in_addr **addr_ptr;		
@@ -170,6 +174,7 @@ void tcp_daemon(int port) {
     int sock, sock_con, one = 1;
     struct sockaddr_in tcp;
     struct sockaddr_in cli;
+	struct pthread_param pparam;
     unsigned int slen = sizeof(cli);
 
     if ((sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0) {
@@ -205,7 +210,8 @@ void tcp_daemon(int port) {
         }
         debug("Received connection!\n");
         pthread_t thread;
-        pthread_create(&thread, 0, pthread_socks, (void *)sock_con);
+		pparam.sock = sock_con;
+        pthread_create(&thread, 0, pthread_socks, (void *) &pparam);
     }
 }
 

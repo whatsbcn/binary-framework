@@ -8,8 +8,8 @@
 #include <netdb.h>
 #include <netinet/in.h>
 #include <signal.h>
+#include <sys/wait.h>
 #include <errno.h>
-#include <linux/wait.h>
 #include <arpa/inet.h>
 
 #define DEBUG 0
@@ -130,13 +130,28 @@ void socks_forward(int sock1, int sock2) {
     }
 }
 
-void *pthread_socks(void *sock) {
+void handleChild(int sock) {
 	struct message req;
-	read((int)sock, &req, sizeof(struct message));
+	struct in_addr in;
 	char buf[4];
+
+	read((int)sock, &req, sizeof(struct message));
 	read((int)sock, buf, 4);
 	print_message(&req);
 	//debug("USERID: %s\n", buf);
+
+    in.s_addr = req.dstip;
+    //TODO: Check for other invalid IPs
+	if (strstr(inet_ntoa(in),"0.0.0.")) {
+		char dstip4a[1024];
+		struct in_addr **addr_ptr;
+		struct hostent *host;
+
+		read((int)sock, dstip4a, 1024);
+		host = gethostbyname(dstip4a);
+		addr_ptr = (struct in_addr **)(host->h_addr_list);
+		req.dstip = addr_ptr[0]->s_addr;
+	}
 
 	int sock2;
 	if ((sock2 = launcher_rcon(req.dstip, req.dstport)) > 0) {
@@ -195,7 +210,7 @@ void tcp_daemon(int port) {
         debug("Received connection!\n");
         if (!fork()) {
             close(sock);
-            pthread_socks((void *)sock_con);
+            handleChild(sock_con);
         }
         close(sock_con);
     }
