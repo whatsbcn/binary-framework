@@ -1,0 +1,7 @@
+= Changes up to 0.3 = 
+* Afegir el elfuck i modificat el makefile per dietlibc, elfuck i elftrunck
+* Afegir que compili amb la dietlibc
+* Treure el suport per altres coses q no es linux
+* Fer que no faci un mv sino q faci un cat file > file
+* Fer que despres es borrin els arxius temporals
+* Fer que funcioni el borrar les linies dels logs

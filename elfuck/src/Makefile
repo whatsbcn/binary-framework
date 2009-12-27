@@ -1,4 +1,4 @@
-CC=dietlibc/diet -Os gcc
+CC=dietlibc/bin/diet -Os gcc
 CFLAGS=-Wall -O2 -fomit-frame-pointer -I../include
 LDFLAGS=-s
 .c.o:
