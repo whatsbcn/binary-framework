@@ -1,0 +1,86 @@
+.TH SKD-CONFIG 7
+
+.SH NOM
+
+skd-config - definició de les opcions de configuració del rootkit skd
+
+.SH SINOPSIS
+
+.B PASSWORD
+.PP
+.B HOME
+.PP
+.B PROCNAME
+.PP
+.B DEBUG
+.PP
+.B ANTIDEBUG 
+.PP
+.B KEYLOGGER
+.PP
+.B SOCKSD 
+.PP
+.B SHELL
+.PP
+
+.SH OPCIONS
+Les opcions comentades aquí són opcions que ens són preguntades en el moment en què compilem el rootkit.
+
+.TP
+.B PASSWORD
+.PP
+Aquesta opció defineix el password amb què es configurarà el launcher. 
+.PP
+
+.TP
+.B HOME
+.PP
+Aquest serà el home utilitzat per el launcher. Serà fet servir a l'hora de pujar fitxers, i de executar una shell de sistema.
+.PP
+
+.TP
+.B PROCNAME
+.PP
+Aquest nom serà el nom de procés que el rootkit es posarà per tal de passar més desapercebut.
+.PP 
+
+.TP
+.B DEBUG
+.PP
+Aquesta opció implica compilar o no el rootkit amb el suport per a ser debugat. Amb aquest opció, el rootkit és llançat amb foreground, i constantment va mostrant missatges per tal d'anunciar què està fent en cada moment.
+.PP
+
+.TP
+.B ANTIDEBUG
+.PP
+Aquesta opció activa o desactiva les diferents proteccions per tal d'evitar se debugat i/o analitzat.
+.PP
+
+.TP
+.B KEYLOGGER
+.PP
+Aquesta opció afegeix el keylogger dintre del rootkit. Sense ella el keylogger no pot ser utilitzat.
+.PP
+
+.TP
+.B SHELL
+.PP
+Aquesta opció afegeix la nostre shell dintre del rootkit. Sense ella, el sistema on corre el rootkit, cal que disposi d'una shell de sistema per a que ens puguem connectar remotament.
+.PP
+
+.SH DISPONIBILITAT
+
+Totes les variants de UNIX que compleixin l'estàndard POSIX.
+
+.SH DESCRIPCIÓ
+
+Aquestes opcions són opcions del moment de compilació del rootkit. Cal tenir en compte que el skd-client no es veu afectat per aquestes opcions, de tal manera que es pugui comunicar sense problemes amb launchers compilats utilitzant unes opcions o utilitzant-ne unes altres.
+
+.SH AUTOR
+
+Albert Sellarès <whats[@t]wekk.net>
+
+.SH VEURE TAMBÉ
+.RS
+skd-launcher(1), skd-client(1).
+.RE

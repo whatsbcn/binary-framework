@@ -1,0 +1,142 @@
+.TH SKD-CLIENT 1
+
+.SH NOM
+skd-client - client per gestionar el rootkit skd
+
+.SH SINOPSIS
+
+.B skd-client -a 
+.RI { shell | down | up | check | listen } 
+.B -c 
+.RI { tcp | raw | rev } 
+.B -h 
+.I hostname 
+.B -l 
+.I port 
+.B -d 
+.I port 
+.RB [ -f 
+.IR file ] 
+.RB [ -t 
+.IR secs ]
+
+.SH OPCIONS
+
+.TP
+.B -a
+.RI { shell | down | up | check | listen }
+.RS
+.PP
+Aquesta opció ens permet seleccionar l'opció a executar. Les diferents opcions disponibles són: shell, down, up check i listen.
+.PP
+.IR shell :
+aquesta acció ens permet obtenir una shell lligada a un TTY a la màquina remota on s'està executant el launcher.
+.PP
+.IR up :
+aquesta acció ens permet pujar un fitxer a la màquina remota. El fitxer pujat, serà guardat en el directori HOME de l'usuari.
+.PP
+.IR down :
+aquesta acció ens permet descarregar una fitxer del disc dur de la màquina remota. Per tal de descarregar-lo, cal especificar el path complet on es troba el fitxer.
+.PP
+.IR check :
+aquesta acció ens permet comprovar si hi ha una instància del launcher en execució a l'altre màquina.
+.PP
+.IR listen :
+aquesta acció queda escoltant a un port TCP a l'espera que el launcher li estableixi una connexió, i així 
+acabar llançant una shell.
+.RE
+
+." -c option
+.TP
+.B -c
+.RI { tcp | raw | rev }
+.RS
+.PP
+Aquesta opció ens permet definir el mode de comunicació que s'utilitzarà a l'hora de realitzar l'acció especificada amb el parametre -a. Tots els modes de comunicació requereixen de la utilització del paràmetre -h. Els diferents valors possibles són:
+.PP
+.IR tcp :
+aquest mode de comunicació és el què s'utilitza quan el launcher està en execució en un entorn no privilegiat. Tracta en establir una connexió tcp directament amb el launcher i comunicar-se per aquí. Aquest mode requereix a més, de la utilització del paràmetre -d.
+
+.PP
+.IR raw :
+aquest mode de comunicació, estableix una connexió utilitzant un protocol propi. Per tal d'utilitzar aquest mode, tant el launcher com el client han de ser executats com a usuari root. Aquest mode també requereix dels paràmetres -d i -l.
+
+.PP
+.IR rev :
+aquest mode de comunicació, estableix una connexió a un port ja obert a la màquina on hi ha el launcher, i després espera que aquesta estableixi una connexió cap a ell. Per tal de fer això, requereix dels paràmetres -d i -l.
+.RE
+
+.TP
+.BR -h :
+.IR hostname .
+Aquesta opció especifica amb el què es vol contactar. El paràmetre
+.I hostname
+pot ser una direcció ip o un nom DNS.
+
+.TP
+.BR -l :
+.IR port .
+En aquesta opció, port és el port local de la màquina que el client utilitzarà per el mode de comunicació
+en qüestió. 
+
+.TP
+.BR -d :
+.IR port .
+En aquesta opció, port és el port destí utilitzat per el mode de comunicació. Normalment serà el port utilitzat on enviar les dades.
+
+.TP
+.BR -f :
+.IR file .
+En les accions on calgui especificar un fitxer (ja sigui per pujar o per descarregar), s'utilitzarà aquesta opció per a definir-lo.
+
+.TP
+.BR -t :
+.IR sec .
+Opció utilitzada per a definir un timeout en l'establiment de la connexió entre el client i el launcher. El temps per defecte és de 10 segons.
+
+.SH DISPONIBILITAT
+
+Totes les variants de UNIX que compleixin l'estàndard POSIX.
+
+.SH DESCRIPCIÓ
+
+skd-client ens permet utilitzar les diferents funcionalitats del rootkit skd. Amb aquest client ens podem
+connectar a la part launcher utilitzant els diferents modes de comunicació, així com executar les diferents accions disponibles. 
+.PP
+En el moment en què el skd-client és executat, aquest sol·licita un password que serà utilitzat per a autenticar i xifrar la connexió amb el launcher. 
+
+.SH EXEMPLES
+.B skd-client -a shell -c tcp -h 127.0.0.1 -d 9999
+.PP
+Estableix una connexió TCP amb el host 127.0.0.1 al port 9999, i sol·licita l'execució d'una shell. Al fer-ho, la pròpia connexió, passa a ser la connexió establerta amb la shell.
+
+.B skd-client -a shell -c raw -h localhost -d 9999 -l 8888 -t 3
+.PP
+Estableix una connexió RAW amb el host localhost utilitzant els ports 9999 i 8888. Al fer-ho defineix un timeout de 3 segons. D'aquesta connexió, també s'obté una shell.
+
+.B skd-client -a listen -l 8888
+.PP
+Obre el port TCP 8888, i espera rebre una connexió en aquest port infinitament. Si la rep, aquesta connexió
+esdevé amb una shell.
+
+.B skd-client -a up -c rev -h 127.0.0.1 -d 80 -l 8888 -f data.zip
+.PP
+Estableix una connexió TCP amb el port 80 del host 127.0.0.1 i envia un paquet especial de tal manera que llavors el launcher estableix una connexió al port local 8888. Al rebre la connexió del launcher, s'inicia 
+una transferència del fitxer data.zip que serà guardat en el home utilitzat pel launcher.
+
+.B skd-client -a down -c rev -h 127.0.0.1 -d 80 -l 8888 -f /var/tmp/file.zip
+.PP
+Segueix exactament els mateixos passos que en el cas anterior, però en aquest cas, sol·licita la descàrrega del fitxer /var/tmp/file.zip. Aquest fitxer és descarregat en el directori on estiguem en el moment d'executar la comanda.
+
+.B skd-client -a check -c rev -h 127.0.0.1 -d 80 -l 8888
+.PP
+Estableix una connexió TCP igual que en els exemples anteriors. En aquest cas el paquet que envia no està xifrat. En cas de ser contestat, el skd-client mostrarà un missatge indicant que s'ha trobat un launcher en el host objectiu.
+
+.SH AUTOR
+
+Albert Sellarès <whats[@t]wekk.net>
+
+.SH VEURE TAMBÉ
+.RS
+skd-launcher(1), skd-config(7).
+.RE

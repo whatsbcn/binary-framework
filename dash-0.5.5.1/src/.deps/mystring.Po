@@ -1,0 +1,81 @@
+mystring.o: mystring.c ../config.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/ctype.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/cdefs.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/errno.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/inttypes.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/endian.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/limits.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/stdint.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/stdlib.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/types.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/stddef.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/alloca.h shell.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/param.h syntax.h \
+  error.h /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/setjmp.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/signal.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/time.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/select.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/string.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/ucontext.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/asm/sigcontext.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/asm/i386-sigcontext.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/asm/types.h \
+  mystring.h memalloc.h parser.h system.h
+
+../config.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/ctype.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/cdefs.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/errno.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/inttypes.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/endian.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/limits.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/stdint.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/stdlib.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/types.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/stddef.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/alloca.h:
+
+shell.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/param.h:
+
+syntax.h:
+
+error.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/setjmp.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/signal.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/time.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/select.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/string.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/ucontext.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/asm/sigcontext.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/asm/i386-sigcontext.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/asm/types.h:
+
+mystring.h:
+
+memalloc.h:
+
+parser.h:
+
+system.h:

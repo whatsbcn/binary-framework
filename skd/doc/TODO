@@ -1,0 +1,19 @@
+GENERAL
+=======
+- Permetre fer tunnels des de el client al launcher
+- infecció de capçaleres elf per a instal·lar-lo
+- Afegir capçaleres dient llicència i nom
+CLIENT
+======
+- Utilitzar el timeout per si password erroni
+DASH
+====
+- que el dash permeti els tabs
+- definir alias per defecte
+SOCKS
+=====
+- afegir el suport per socks4a
+KEYLOGGER
+=========
+- Permetre passar-li un pid com a procés
+- Estudiar si els paquets tenen sempre un tipus per saber si és un username, un password o una altre cosa

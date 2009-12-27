@@ -1,0 +1,16 @@
+builtins.o: builtins.c ../config.h shell.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/param.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/limits.h \
+  /home/whats/Desktop/pfc/skd/dietlibc-0.31/include/endian.h builtins.h
+
+../config.h:
+
+shell.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/sys/param.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/limits.h:
+
+/home/whats/Desktop/pfc/skd/dietlibc-0.31/include/endian.h:
+
+builtins.h:
