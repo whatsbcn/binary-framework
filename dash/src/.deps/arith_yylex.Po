@@ -1,0 +1,77 @@
+arith_yylex.o: arith_yylex.c ../config.h \
+  /home/whats/Desktop/tools/dietlibc/include/inttypes.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h \
+  /home/whats/Desktop/tools/dietlibc/include/endian.h \
+  /home/whats/Desktop/tools/dietlibc/include/stdlib.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/types.h \
+  /home/whats/Desktop/tools/dietlibc/include/stddef.h \
+  /home/whats/Desktop/tools/dietlibc/include/alloca.h \
+  /home/whats/Desktop/tools/dietlibc/include/string.h arith_yacc.h \
+  expand.h /home/whats/Desktop/tools/dietlibc/include/stdint.h error.h \
+  /home/whats/Desktop/tools/dietlibc/include/setjmp.h \
+  /home/whats/Desktop/tools/dietlibc/include/signal.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/time.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/select.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h \
+  /home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h \
+  /home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h \
+  /home/whats/Desktop/tools/dietlibc/include/asm/types.h shell.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/param.h \
+  /home/whats/Desktop/tools/dietlibc/include/limits.h memalloc.h syntax.h \
+  /home/whats/Desktop/tools/dietlibc/include/ctype.h system.h
+
+../config.h:
+
+/home/whats/Desktop/tools/dietlibc/include/inttypes.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h:
+
+/home/whats/Desktop/tools/dietlibc/include/endian.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stdlib.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/types.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stddef.h:
+
+/home/whats/Desktop/tools/dietlibc/include/alloca.h:
+
+/home/whats/Desktop/tools/dietlibc/include/string.h:
+
+arith_yacc.h:
+
+expand.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stdint.h:
+
+error.h:
+
+/home/whats/Desktop/tools/dietlibc/include/setjmp.h:
+
+/home/whats/Desktop/tools/dietlibc/include/signal.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/time.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/select.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h:
+
+/home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h:
+
+/home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h:
+
+/home/whats/Desktop/tools/dietlibc/include/asm/types.h:
+
+shell.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/param.h:
+
+/home/whats/Desktop/tools/dietlibc/include/limits.h:
+
+memalloc.h:
+
+syntax.h:
+
+/home/whats/Desktop/tools/dietlibc/include/ctype.h:
+
+system.h:

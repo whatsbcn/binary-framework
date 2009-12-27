@@ -1,0 +1,94 @@
+histedit.o: histedit.c ../config.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/param.h \
+  /home/whats/Desktop/tools/dietlibc/include/limits.h \
+  /home/whats/Desktop/tools/dietlibc/include/endian.h \
+  /home/whats/Desktop/tools/dietlibc/include/paths.h \
+  /home/whats/Desktop/tools/dietlibc/include/stdio.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/types.h \
+  /home/whats/Desktop/tools/dietlibc/include/inttypes.h \
+  /home/whats/Desktop/tools/dietlibc/include/stddef.h \
+  /home/whats/Desktop/tools/dietlibc/include/stdarg.h \
+  /home/whats/Desktop/tools/dietlibc/include/stdlib.h \
+  /home/whats/Desktop/tools/dietlibc/include/alloca.h \
+  /home/whats/Desktop/tools/dietlibc/include/unistd.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/fsuid.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/select.h \
+  /home/whats/Desktop/tools/dietlibc/include/string.h \
+  /home/whats/Desktop/tools/dietlibc/include/signal.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/time.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h \
+  /home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h \
+  /home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h \
+  /home/whats/Desktop/tools/dietlibc/include/asm/types.h shell.h parser.h \
+  var.h /home/whats/Desktop/tools/dietlibc/include/stdint.h options.h \
+  main.h /home/whats/Desktop/tools/dietlibc/include/errno.h output.h \
+  mystring.h error.h /home/whats/Desktop/tools/dietlibc/include/setjmp.h
+
+../config.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/param.h:
+
+/home/whats/Desktop/tools/dietlibc/include/limits.h:
+
+/home/whats/Desktop/tools/dietlibc/include/endian.h:
+
+/home/whats/Desktop/tools/dietlibc/include/paths.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stdio.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/types.h:
+
+/home/whats/Desktop/tools/dietlibc/include/inttypes.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stddef.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stdarg.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stdlib.h:
+
+/home/whats/Desktop/tools/dietlibc/include/alloca.h:
+
+/home/whats/Desktop/tools/dietlibc/include/unistd.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/fsuid.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/select.h:
+
+/home/whats/Desktop/tools/dietlibc/include/string.h:
+
+/home/whats/Desktop/tools/dietlibc/include/signal.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/time.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h:
+
+/home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h:
+
+/home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h:
+
+/home/whats/Desktop/tools/dietlibc/include/asm/types.h:
+
+shell.h:
+
+parser.h:
+
+var.h:
+
+/home/whats/Desktop/tools/dietlibc/include/stdint.h:
+
+options.h:
+
+main.h:
+
+/home/whats/Desktop/tools/dietlibc/include/errno.h:
+
+output.h:
+
+mystring.h:
+
+error.h:
+
+/home/whats/Desktop/tools/dietlibc/include/setjmp.h:

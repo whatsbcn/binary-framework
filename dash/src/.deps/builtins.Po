@@ -1,0 +1,16 @@
+builtins.o: builtins.c ../config.h shell.h \
+  /home/whats/Desktop/tools/dietlibc/include/sys/param.h \
+  /home/whats/Desktop/tools/dietlibc/include/limits.h \
+  /home/whats/Desktop/tools/dietlibc/include/endian.h builtins.h
+
+../config.h:
+
+shell.h:
+
+/home/whats/Desktop/tools/dietlibc/include/sys/param.h:
+
+/home/whats/Desktop/tools/dietlibc/include/limits.h:
+
+/home/whats/Desktop/tools/dietlibc/include/endian.h:
+
+builtins.h:

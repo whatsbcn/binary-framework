@@ -1,0 +1,11 @@
+= Changes up to 0.3 =
+* Recull de parametres via getopts
+* Afegida opció per comprobar si un binari està ja infectat
+
+= Changes up to 0.2 =
+* Comprovació de l'existencia dels fitxers d'entrada
+* Separada com a opcio fer o no backup del binari a modificar, i modificar-lo
+directament o sobre una copia
+
+= Changes up to 0.1 =
+* Extret del suckit 2 devel rc2
