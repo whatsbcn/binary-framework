@@ -67,9 +67,9 @@ Thread model: posix
 gcc version 4.3.2 (Gentoo 4.3.2-r3 p1.6, pie-10.1.5) 
 COMPILER_PATH=/usr/libexec/gcc/i686-pc-linux-gnu/4.3.2/:/usr/libexec/gcc/i686-pc-linux-gnu/4.3.2/:/usr/libexec/gcc/i686-pc-linux-gnu/:/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/:/usr/lib/gcc/i686-pc-linux-gnu/:/usr/libexec/gcc/i686-pc-linux-gnu/4.3.2/:/usr/libexec/gcc/i686-pc-linux-gnu/:/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/:/usr/lib/gcc/i686-pc-linux-gnu/:/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/../../../../i686-pc-linux-gnu/bin/
 LIBRARY_PATH=/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/:/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/:/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/../../../../i686-pc-linux-gnu/lib/:/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-nostdlib' '-static' '-L/home/whats/Desktop/tools/dietlibc/bin-i386' '-v' '-isystem' '/home/whats/Desktop/tools/dietlibc/include' '-D__dietlibc__' '-mtune=generic' '-march=i686'
- /usr/libexec/gcc/i686-pc-linux-gnu/4.3.2/collect2 -m elf_i386 -static -L/home/whats/Desktop/tools/dietlibc/bin-i386 -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2 -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2 -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/../../../../i686-pc-linux-gnu/lib -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/../../.. /home/whats/Desktop/tools/dietlibc/bin-i386/start.o /home/whats/Desktop/tools/dietlibc/bin-i386/dietlibc.a -lgcc
-/home/whats/Desktop/tools/dietlibc/bin-i386/dietlibc.a(stackgap.o): In function `stackgap':
+COLLECT_GCC_OPTIONS='-nostdlib' '-static' '-L/home/whats/code/tools/dietlibc/bin-i386' '-v' '-isystem' '/home/whats/code/tools/dietlibc/include' '-D__dietlibc__' '-mtune=generic' '-march=i686'
+ /usr/libexec/gcc/i686-pc-linux-gnu/4.3.2/collect2 -m elf_i386 -static -L/home/whats/code/tools/dietlibc/bin-i386 -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2 -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2 -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/../../../../i686-pc-linux-gnu/lib -L/usr/lib/gcc/i686-pc-linux-gnu/4.3.2/../../.. /home/whats/code/tools/dietlibc/bin-i386/start.o /home/whats/code/tools/dietlibc/bin-i386/dietlibc.a -lgcc
+/home/whats/code/tools/dietlibc/bin-i386/dietlibc.a(stackgap.o): In function `stackgap':
 stackgap.c:(.text+0xa7): undefined reference to `main'
 collect2: ld returned 1 exit status
 configure:2644: $? = 1
@@ -316,7 +316,7 @@ configure:4640: $? = 0
 configure:4662: result: yes
 configure:4577: checking for imaxdiv
 configure:4633: ../dietlibc/bin/diet gcc -o conftest    conftest.c  >&5
-/tmp/ccMfpHA2.o: In function `main':
+/tmp/ccKpGXxB.o: In function `main':
 conftest.c:(.text+0x12): undefined reference to `imaxdiv'
 collect2: ld returned 1 exit status
 configure:4640: $? = 1
@@ -401,7 +401,7 @@ configure:4662: result: yes
 configure:4577: checking for mempcpy
 configure:4633: ../dietlibc/bin/diet gcc -o conftest    conftest.c  >&5
 conftest.c:55: warning: conflicting types for built-in function 'mempcpy'
-/tmp/cc8YIUUu.o: In function `main':
+/tmp/ccMueANo.o: In function `main':
 conftest.c:(.text+0x12): undefined reference to `mempcpy'
 collect2: ld returned 1 exit status
 configure:4640: $? = 1
@@ -478,7 +478,7 @@ configure: failed program was:
 configure:4662: result: no
 configure:4577: checking for sigsetmask
 configure:4633: ../dietlibc/bin/diet gcc -o conftest    conftest.c  >&5
-/tmp/ccwZgxlD.o: In function `main':
+/tmp/cccHoxFk.o: In function `main':
 conftest.c:(.text+0x12): undefined reference to `sigsetmask'
 collect2: ld returned 1 exit status
 configure:4640: $? = 1
@@ -556,7 +556,7 @@ configure:4662: result: no
 configure:4577: checking for stpcpy
 configure:4633: ../dietlibc/bin/diet gcc -o conftest    conftest.c  >&5
 conftest.c:55: warning: conflicting types for built-in function 'stpcpy'
-/tmp/cceurCBM.o: In function `main':
+/tmp/ccUdCNcs.o: In function `main':
 conftest.c:(.text+0x12): undefined reference to `stpcpy'
 collect2: ld returned 1 exit status
 configure:4640: $? = 1
@@ -633,7 +633,7 @@ configure: failed program was:
 configure:4662: result: no
 configure:4577: checking for strchrnul
 configure:4633: ../dietlibc/bin/diet gcc -o conftest    conftest.c  >&5
-/tmp/cc2zda9V.o: In function `main':
+/tmp/ccKsiuTG.o: In function `main':
 conftest.c:(.text+0x12): undefined reference to `strchrnul'
 collect2: ld returned 1 exit status
 configure:4640: $? = 1
@@ -839,14 +839,14 @@ dash_cv_have_attribute_alias=yes
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/whats/Desktop/tools/dash/missing --run aclocal-1.9'
+ACLOCAL='${SHELL} /home/whats/code/tools/dash/missing --run aclocal-1.9'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
-AMTAR='${SHELL} /home/whats/Desktop/tools/dash/missing --run tar'
-AUTOCONF='${SHELL} /home/whats/Desktop/tools/dash/missing --run autoconf'
-AUTOHEADER='${SHELL} /home/whats/Desktop/tools/dash/missing --run autoheader'
-AUTOMAKE='${SHELL} /home/whats/Desktop/tools/dash/missing --run automake-1.9'
+AMTAR='${SHELL} /home/whats/code/tools/dash/missing --run tar'
+AUTOCONF='${SHELL} /home/whats/code/tools/dash/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/whats/code/tools/dash/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/whats/code/tools/dash/missing --run automake-1.9'
 AWK='gawk'
 CC='../dietlibc/bin/diet gcc'
 CCDEPMODE='depmode=gcc3'
@@ -871,7 +871,7 @@ LDFLAGS=''
 LIBOBJS=''
 LIBS=''
 LTLIBOBJS=''
-MAKEINFO='${SHELL} /home/whats/Desktop/tools/dash/missing --run makeinfo'
+MAKEINFO='${SHELL} /home/whats/code/tools/dash/missing --run makeinfo'
 OBJEXT='o'
 PACKAGE='dash'
 PACKAGE_BUGREPORT=''
@@ -905,7 +905,7 @@ host_alias=''
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='/home/whats/Desktop/tools/dash/install-sh'
+install_sh='/home/whats/code/tools/dash/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

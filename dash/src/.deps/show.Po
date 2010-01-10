@@ -1,37 +1,37 @@
 show.o: show.c ../config.h \
-  /home/whats/Desktop/tools/dietlibc/include/stdio.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/types.h \
-  /home/whats/Desktop/tools/dietlibc/include/inttypes.h \
-  /home/whats/Desktop/tools/dietlibc/include/endian.h \
-  /home/whats/Desktop/tools/dietlibc/include/stddef.h \
-  /home/whats/Desktop/tools/dietlibc/include/stdarg.h shell.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/param.h \
-  /home/whats/Desktop/tools/dietlibc/include/limits.h parser.h nodes.h \
-  mystring.h /home/whats/Desktop/tools/dietlibc/include/stdint.h \
-  /home/whats/Desktop/tools/dietlibc/include/string.h show.h options.h
+  /home/whats/code/tools/dietlibc/include/stdio.h \
+  /home/whats/code/tools/dietlibc/include/sys/cdefs.h \
+  /home/whats/code/tools/dietlibc/include/sys/types.h \
+  /home/whats/code/tools/dietlibc/include/inttypes.h \
+  /home/whats/code/tools/dietlibc/include/endian.h \
+  /home/whats/code/tools/dietlibc/include/stddef.h \
+  /home/whats/code/tools/dietlibc/include/stdarg.h shell.h \
+  /home/whats/code/tools/dietlibc/include/sys/param.h \
+  /home/whats/code/tools/dietlibc/include/limits.h parser.h nodes.h \
+  mystring.h /home/whats/code/tools/dietlibc/include/stdint.h \
+  /home/whats/code/tools/dietlibc/include/string.h show.h options.h
 
 ../config.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdio.h:
+/home/whats/code/tools/dietlibc/include/stdio.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h:
+/home/whats/code/tools/dietlibc/include/sys/cdefs.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/types.h:
+/home/whats/code/tools/dietlibc/include/sys/types.h:
 
-/home/whats/Desktop/tools/dietlibc/include/inttypes.h:
+/home/whats/code/tools/dietlibc/include/inttypes.h:
 
-/home/whats/Desktop/tools/dietlibc/include/endian.h:
+/home/whats/code/tools/dietlibc/include/endian.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stddef.h:
+/home/whats/code/tools/dietlibc/include/stddef.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdarg.h:
+/home/whats/code/tools/dietlibc/include/stdarg.h:
 
 shell.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/param.h:
+/home/whats/code/tools/dietlibc/include/sys/param.h:
 
-/home/whats/Desktop/tools/dietlibc/include/limits.h:
+/home/whats/code/tools/dietlibc/include/limits.h:
 
 parser.h:
 
@@ -39,9 +39,9 @@ nodes.h:
 
 mystring.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdint.h:
+/home/whats/code/tools/dietlibc/include/stdint.h:
 
-/home/whats/Desktop/tools/dietlibc/include/string.h:
+/home/whats/code/tools/dietlibc/include/string.h:
 
 show.h:
 

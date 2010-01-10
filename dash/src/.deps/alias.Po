@@ -1,79 +1,79 @@
 alias.o: alias.c ../config.h \
-  /home/whats/Desktop/tools/dietlibc/include/stdlib.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/types.h \
-  /home/whats/Desktop/tools/dietlibc/include/inttypes.h \
-  /home/whats/Desktop/tools/dietlibc/include/endian.h \
-  /home/whats/Desktop/tools/dietlibc/include/stddef.h \
-  /home/whats/Desktop/tools/dietlibc/include/alloca.h shell.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/param.h \
-  /home/whats/Desktop/tools/dietlibc/include/limits.h input.h output.h \
-  /home/whats/Desktop/tools/dietlibc/include/stdarg.h error.h \
-  /home/whats/Desktop/tools/dietlibc/include/setjmp.h \
-  /home/whats/Desktop/tools/dietlibc/include/signal.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/time.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/select.h \
-  /home/whats/Desktop/tools/dietlibc/include/string.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h \
-  /home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h \
-  /home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h \
-  /home/whats/Desktop/tools/dietlibc/include/asm/types.h memalloc.h \
-  mystring.h /home/whats/Desktop/tools/dietlibc/include/stdint.h alias.h \
+  /home/whats/code/tools/dietlibc/include/stdlib.h \
+  /home/whats/code/tools/dietlibc/include/sys/cdefs.h \
+  /home/whats/code/tools/dietlibc/include/sys/types.h \
+  /home/whats/code/tools/dietlibc/include/inttypes.h \
+  /home/whats/code/tools/dietlibc/include/endian.h \
+  /home/whats/code/tools/dietlibc/include/stddef.h \
+  /home/whats/code/tools/dietlibc/include/alloca.h shell.h \
+  /home/whats/code/tools/dietlibc/include/sys/param.h \
+  /home/whats/code/tools/dietlibc/include/limits.h input.h output.h \
+  /home/whats/code/tools/dietlibc/include/stdarg.h error.h \
+  /home/whats/code/tools/dietlibc/include/setjmp.h \
+  /home/whats/code/tools/dietlibc/include/signal.h \
+  /home/whats/code/tools/dietlibc/include/sys/time.h \
+  /home/whats/code/tools/dietlibc/include/sys/select.h \
+  /home/whats/code/tools/dietlibc/include/string.h \
+  /home/whats/code/tools/dietlibc/include/sys/ucontext.h \
+  /home/whats/code/tools/dietlibc/include/asm/sigcontext.h \
+  /home/whats/code/tools/dietlibc/include/asm/i386-sigcontext.h \
+  /home/whats/code/tools/dietlibc/include/asm/types.h memalloc.h \
+  mystring.h /home/whats/code/tools/dietlibc/include/stdint.h alias.h \
   options.h
 
 ../config.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdlib.h:
+/home/whats/code/tools/dietlibc/include/stdlib.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h:
+/home/whats/code/tools/dietlibc/include/sys/cdefs.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/types.h:
+/home/whats/code/tools/dietlibc/include/sys/types.h:
 
-/home/whats/Desktop/tools/dietlibc/include/inttypes.h:
+/home/whats/code/tools/dietlibc/include/inttypes.h:
 
-/home/whats/Desktop/tools/dietlibc/include/endian.h:
+/home/whats/code/tools/dietlibc/include/endian.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stddef.h:
+/home/whats/code/tools/dietlibc/include/stddef.h:
 
-/home/whats/Desktop/tools/dietlibc/include/alloca.h:
+/home/whats/code/tools/dietlibc/include/alloca.h:
 
 shell.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/param.h:
+/home/whats/code/tools/dietlibc/include/sys/param.h:
 
-/home/whats/Desktop/tools/dietlibc/include/limits.h:
+/home/whats/code/tools/dietlibc/include/limits.h:
 
 input.h:
 
 output.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdarg.h:
+/home/whats/code/tools/dietlibc/include/stdarg.h:
 
 error.h:
 
-/home/whats/Desktop/tools/dietlibc/include/setjmp.h:
+/home/whats/code/tools/dietlibc/include/setjmp.h:
 
-/home/whats/Desktop/tools/dietlibc/include/signal.h:
+/home/whats/code/tools/dietlibc/include/signal.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/time.h:
+/home/whats/code/tools/dietlibc/include/sys/time.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/select.h:
+/home/whats/code/tools/dietlibc/include/sys/select.h:
 
-/home/whats/Desktop/tools/dietlibc/include/string.h:
+/home/whats/code/tools/dietlibc/include/string.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h:
+/home/whats/code/tools/dietlibc/include/sys/ucontext.h:
 
-/home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h:
+/home/whats/code/tools/dietlibc/include/asm/sigcontext.h:
 
-/home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h:
+/home/whats/code/tools/dietlibc/include/asm/i386-sigcontext.h:
 
-/home/whats/Desktop/tools/dietlibc/include/asm/types.h:
+/home/whats/code/tools/dietlibc/include/asm/types.h:
 
 memalloc.h:
 
 mystring.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdint.h:
+/home/whats/code/tools/dietlibc/include/stdint.h:
 
 alias.h:
 

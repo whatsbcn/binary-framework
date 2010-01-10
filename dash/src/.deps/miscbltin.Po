@@ -1,82 +1,82 @@
 miscbltin.o: miscbltin.c ../config.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/types.h \
-  /home/whats/Desktop/tools/dietlibc/include/inttypes.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h \
-  /home/whats/Desktop/tools/dietlibc/include/endian.h \
-  /home/whats/Desktop/tools/dietlibc/include/stddef.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/param.h \
-  /home/whats/Desktop/tools/dietlibc/include/limits.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/stat.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/time.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/select.h \
-  /home/whats/Desktop/tools/dietlibc/include/string.h \
-  /home/whats/Desktop/tools/dietlibc/include/signal.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h \
-  /home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h \
-  /home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h \
-  /home/whats/Desktop/tools/dietlibc/include/asm/types.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/resource.h \
-  /home/whats/Desktop/tools/dietlibc/include/time.h \
-  /home/whats/Desktop/tools/dietlibc/include/unistd.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/fsuid.h \
-  /home/whats/Desktop/tools/dietlibc/include/stdlib.h \
-  /home/whats/Desktop/tools/dietlibc/include/alloca.h \
-  /home/whats/Desktop/tools/dietlibc/include/ctype.h \
-  /home/whats/Desktop/tools/dietlibc/include/stdint.h shell.h options.h \
-  var.h output.h /home/whats/Desktop/tools/dietlibc/include/stdarg.h \
-  memalloc.h error.h /home/whats/Desktop/tools/dietlibc/include/setjmp.h \
+  /home/whats/code/tools/dietlibc/include/sys/types.h \
+  /home/whats/code/tools/dietlibc/include/inttypes.h \
+  /home/whats/code/tools/dietlibc/include/sys/cdefs.h \
+  /home/whats/code/tools/dietlibc/include/endian.h \
+  /home/whats/code/tools/dietlibc/include/stddef.h \
+  /home/whats/code/tools/dietlibc/include/sys/param.h \
+  /home/whats/code/tools/dietlibc/include/limits.h \
+  /home/whats/code/tools/dietlibc/include/sys/stat.h \
+  /home/whats/code/tools/dietlibc/include/sys/time.h \
+  /home/whats/code/tools/dietlibc/include/sys/select.h \
+  /home/whats/code/tools/dietlibc/include/string.h \
+  /home/whats/code/tools/dietlibc/include/signal.h \
+  /home/whats/code/tools/dietlibc/include/sys/ucontext.h \
+  /home/whats/code/tools/dietlibc/include/asm/sigcontext.h \
+  /home/whats/code/tools/dietlibc/include/asm/i386-sigcontext.h \
+  /home/whats/code/tools/dietlibc/include/asm/types.h \
+  /home/whats/code/tools/dietlibc/include/sys/resource.h \
+  /home/whats/code/tools/dietlibc/include/time.h \
+  /home/whats/code/tools/dietlibc/include/unistd.h \
+  /home/whats/code/tools/dietlibc/include/sys/fsuid.h \
+  /home/whats/code/tools/dietlibc/include/stdlib.h \
+  /home/whats/code/tools/dietlibc/include/alloca.h \
+  /home/whats/code/tools/dietlibc/include/ctype.h \
+  /home/whats/code/tools/dietlibc/include/stdint.h shell.h options.h \
+  var.h output.h /home/whats/code/tools/dietlibc/include/stdarg.h \
+  memalloc.h error.h /home/whats/code/tools/dietlibc/include/setjmp.h \
   miscbltin.h mystring.h main.h \
-  /home/whats/Desktop/tools/dietlibc/include/errno.h
+  /home/whats/code/tools/dietlibc/include/errno.h
 
 ../config.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/types.h:
+/home/whats/code/tools/dietlibc/include/sys/types.h:
 
-/home/whats/Desktop/tools/dietlibc/include/inttypes.h:
+/home/whats/code/tools/dietlibc/include/inttypes.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h:
+/home/whats/code/tools/dietlibc/include/sys/cdefs.h:
 
-/home/whats/Desktop/tools/dietlibc/include/endian.h:
+/home/whats/code/tools/dietlibc/include/endian.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stddef.h:
+/home/whats/code/tools/dietlibc/include/stddef.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/param.h:
+/home/whats/code/tools/dietlibc/include/sys/param.h:
 
-/home/whats/Desktop/tools/dietlibc/include/limits.h:
+/home/whats/code/tools/dietlibc/include/limits.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/stat.h:
+/home/whats/code/tools/dietlibc/include/sys/stat.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/time.h:
+/home/whats/code/tools/dietlibc/include/sys/time.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/select.h:
+/home/whats/code/tools/dietlibc/include/sys/select.h:
 
-/home/whats/Desktop/tools/dietlibc/include/string.h:
+/home/whats/code/tools/dietlibc/include/string.h:
 
-/home/whats/Desktop/tools/dietlibc/include/signal.h:
+/home/whats/code/tools/dietlibc/include/signal.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/ucontext.h:
+/home/whats/code/tools/dietlibc/include/sys/ucontext.h:
 
-/home/whats/Desktop/tools/dietlibc/include/asm/sigcontext.h:
+/home/whats/code/tools/dietlibc/include/asm/sigcontext.h:
 
-/home/whats/Desktop/tools/dietlibc/include/asm/i386-sigcontext.h:
+/home/whats/code/tools/dietlibc/include/asm/i386-sigcontext.h:
 
-/home/whats/Desktop/tools/dietlibc/include/asm/types.h:
+/home/whats/code/tools/dietlibc/include/asm/types.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/resource.h:
+/home/whats/code/tools/dietlibc/include/sys/resource.h:
 
-/home/whats/Desktop/tools/dietlibc/include/time.h:
+/home/whats/code/tools/dietlibc/include/time.h:
 
-/home/whats/Desktop/tools/dietlibc/include/unistd.h:
+/home/whats/code/tools/dietlibc/include/unistd.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/fsuid.h:
+/home/whats/code/tools/dietlibc/include/sys/fsuid.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdlib.h:
+/home/whats/code/tools/dietlibc/include/stdlib.h:
 
-/home/whats/Desktop/tools/dietlibc/include/alloca.h:
+/home/whats/code/tools/dietlibc/include/alloca.h:
 
-/home/whats/Desktop/tools/dietlibc/include/ctype.h:
+/home/whats/code/tools/dietlibc/include/ctype.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdint.h:
+/home/whats/code/tools/dietlibc/include/stdint.h:
 
 shell.h:
 
@@ -86,13 +86,13 @@ var.h:
 
 output.h:
 
-/home/whats/Desktop/tools/dietlibc/include/stdarg.h:
+/home/whats/code/tools/dietlibc/include/stdarg.h:
 
 memalloc.h:
 
 error.h:
 
-/home/whats/Desktop/tools/dietlibc/include/setjmp.h:
+/home/whats/code/tools/dietlibc/include/setjmp.h:
 
 miscbltin.h:
 
@@ -100,4 +100,4 @@ mystring.h:
 
 main.h:
 
-/home/whats/Desktop/tools/dietlibc/include/errno.h:
+/home/whats/code/tools/dietlibc/include/errno.h:

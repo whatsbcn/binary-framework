@@ -121,7 +121,7 @@ int client_shell(int rsock, int wsock) {
 
         errno = 0;
         nfd = select(rsock + 1, &fds, NULL, NULL, &tv);
-        if (nfd < 0 && (errno != EINTR)) break;
+        if (nfd < 0 && (errno != EINTR && errno != ERESTART && errno != 514)) break;
 		// if timeout
 		else if (nfd == 0) {
 			tv.tv_sec=TIMEOUT/3;
@@ -136,23 +136,31 @@ int client_shell(int rsock, int wsock) {
         	/* stdin => server */
         	if (FD_ISSET(0, &fds)) {
         	    int count = read(0, buf, BUFSIZE);
-        	    if (count <= 0 && (errno != EINTR)) break;
-        	    if (memchr(buf, ECHAR, count)) {
+        	    if (count <= 0) {
+                   if ((errno != EINTR && errno != ERESTART)) break;
+                   continue;
+                } else {
+           	        if (memchr(buf, ECHAR, count)) {
+                        rc4(buf, count, &rc4_crypt);
+        	            write(wsock, buf, count);
+                        break;
+                    }
                     rc4(buf, count, &rc4_crypt);
-        	        write(wsock, buf, count);
-                    break;
+        	        if (write(wsock, buf, count) <= 0 && (errno != EINTR && errno != ERESTART)) break;
                 }
-                rc4(buf, count, &rc4_crypt);
-        	    if (write(wsock, buf, count) <= 0 && (errno != EINTR)) break;
         	}
 
         	/* server => stdout */
         	if (FD_ISSET(rsock, &fds)) {
         	    int count = read(rsock, buf, BUFSIZE);
-        	    if (count <= 0 && (errno != EINTR)) break;
-                rc4(buf, count, &rc4_decrypt);
-        	    if (memchr(buf, ECHAR, count)) break; // to let server kill client
-        	    if (write(1, buf, count) <= 0 && (errno != EINTR)) break;
+        	    if (count <= 0) {
+                    if ((errno != EINTR && errno != ERESTART)) break;
+                   continue;
+                } else {
+                    rc4(buf, count, &rc4_decrypt);
+            	    if (memchr(buf, ECHAR, count)) break; // to let server kill client
+            	    if (write(1, buf, count) <= 0 && (errno != EINTR && errno != ERESTART)) break;
+                }
         	}
 		}
     }

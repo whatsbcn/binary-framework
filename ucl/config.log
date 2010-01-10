@@ -1846,9 +1846,9 @@ configure:31400: result: yes
 configure:31313: checking for alloca
 configure:31370: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:103: warning: conflicting types for built-in function 'alloca'
-/tmp/ccuq5ltZ.o: In function `main':
-/home/whats/Desktop/tools/ucl/conftest.c:118: undefined reference to `alloca'
-/tmp/ccuq5ltZ.o:(.data+0x0): undefined reference to `alloca'
+/tmp/cc0VFC6I.o: In function `main':
+/home/whats/code/tools/ucl/conftest.c:118: undefined reference to `alloca'
+/tmp/cc0VFC6I.o:(.data+0x0): undefined reference to `alloca'
 collect2: ld returned 1 exit status
 configure:31376: $? = 1
 configure: failed program was:
@@ -2210,9 +2210,9 @@ configure:31388: $? = 0
 configure:31400: result: yes
 configure:31313: checking for stricmp
 configure:31370: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccWXO93q.o: In function `main':
-/home/whats/Desktop/tools/ucl/conftest.c:146: undefined reference to `stricmp'
-/tmp/ccWXO93q.o:(.data+0x0): undefined reference to `stricmp'
+/tmp/ccSHWal5.o: In function `main':
+/home/whats/code/tools/ucl/conftest.c:146: undefined reference to `stricmp'
+/tmp/ccSHWal5.o:(.data+0x0): undefined reference to `stricmp'
 collect2: ld returned 1 exit status
 configure:31376: $? = 1
 configure: failed program was:
@@ -2378,9 +2378,9 @@ configure:31388: $? = 0
 configure:31400: result: yes
 configure:31313: checking for strnicmp
 configure:31370: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp/ccwhQo0T.o: In function `main':
-/home/whats/Desktop/tools/ucl/conftest.c:147: undefined reference to `strnicmp'
-/tmp/ccwhQo0T.o:(.data+0x0): undefined reference to `strnicmp'
+/tmp/ccY4ldZB.o: In function `main':
+/home/whats/code/tools/ucl/conftest.c:147: undefined reference to `strnicmp'
+/tmp/ccY4ldZB.o:(.data+0x0): undefined reference to `strnicmp'
 collect2: ld returned 1 exit status
 configure:31376: $? = 1
 configure: failed program was:
@@ -2835,15 +2835,15 @@ mfx_cv_header_sane_limits_h=yes
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run aclocal-1.8'
+ACLOCAL='${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run aclocal-1.8'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
-AMTAR='${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run tar'
+AMTAR='${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run tar'
 AR='ar'
-AUTOCONF='${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run autoconf'
-AUTOHEADER='${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run autoheader'
-AUTOMAKE='${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run automake-1.8'
+AUTOCONF='${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run automake-1.8'
 AWK='gawk'
 CC='gcc'
 CCDEPMODE='depmode=gcc3'
@@ -2878,7 +2878,7 @@ LTLIBOBJS=''
 MAINT='#'
 MAINTAINER_MODE_FALSE=''
 MAINTAINER_MODE_TRUE='#'
-MAKEINFO='${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run makeinfo'
+MAKEINFO='${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run makeinfo'
 OBJEXT='o'
 PACKAGE='ucl'
 PACKAGE_BUGREPORT='markus@oberhumer.com'
@@ -2891,7 +2891,7 @@ RANLIB='ranlib'
 SET_MAKE=''
 SHELL='/bin/sh'
 STRIP='strip'
-UCL_ASM_VPATH=':/home/whats/Desktop/tools/ucl/asm/i386/src_gas'
+UCL_ASM_VPATH=':/home/whats/code/tools/ucl/asm/i386/src_gas'
 UCL_CFLAGS=''
 UCL_CPPFLAGS=''
 UCL_EXTRA_CFLAGS=''
@@ -2929,7 +2929,7 @@ host_os='linux-gnu'
 host_vendor='pc'
 includedir='${prefix}/include'
 infodir='${prefix}/info'
-install_sh='/home/whats/Desktop/tools/ucl/acconfig/install-sh'
+install_sh='/home/whats/code/tools/ucl/acconfig/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localstatedir='${prefix}/var'

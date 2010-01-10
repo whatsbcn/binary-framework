@@ -1,22 +1,22 @@
 syntax.o: syntax.c ../config.h shell.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/param.h \
-  /home/whats/Desktop/tools/dietlibc/include/limits.h \
-  /home/whats/Desktop/tools/dietlibc/include/endian.h syntax.h \
-  /home/whats/Desktop/tools/dietlibc/include/ctype.h \
-  /home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h
+  /home/whats/code/tools/dietlibc/include/sys/param.h \
+  /home/whats/code/tools/dietlibc/include/limits.h \
+  /home/whats/code/tools/dietlibc/include/endian.h syntax.h \
+  /home/whats/code/tools/dietlibc/include/ctype.h \
+  /home/whats/code/tools/dietlibc/include/sys/cdefs.h
 
 ../config.h:
 
 shell.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/param.h:
+/home/whats/code/tools/dietlibc/include/sys/param.h:
 
-/home/whats/Desktop/tools/dietlibc/include/limits.h:
+/home/whats/code/tools/dietlibc/include/limits.h:
 
-/home/whats/Desktop/tools/dietlibc/include/endian.h:
+/home/whats/code/tools/dietlibc/include/endian.h:
 
 syntax.h:
 
-/home/whats/Desktop/tools/dietlibc/include/ctype.h:
+/home/whats/code/tools/dietlibc/include/ctype.h:
 
-/home/whats/Desktop/tools/dietlibc/include/sys/cdefs.h:
+/home/whats/code/tools/dietlibc/include/sys/cdefs.h:

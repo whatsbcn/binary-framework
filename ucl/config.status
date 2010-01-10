@@ -515,13 +515,13 @@ s,@INSTALL_DATA@,${INSTALL} -m 644,;t t
 s,@CYGPATH_W@,echo,;t t
 s,@PACKAGE@,ucl,;t t
 s,@VERSION@,1.03,;t t
-s,@ACLOCAL@,${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run aclocal-1.8,;t t
-s,@AUTOCONF@,${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run autoconf,;t t
-s,@AUTOMAKE@,${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run automake-1.8,;t t
-s,@AUTOHEADER@,${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run autoheader,;t t
-s,@MAKEINFO@,${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run makeinfo,;t t
-s,@AMTAR@,${SHELL} /home/whats/Desktop/tools/ucl/acconfig/missing --run tar,;t t
-s,@install_sh@,/home/whats/Desktop/tools/ucl/acconfig/install-sh,;t t
+s,@ACLOCAL@,${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run aclocal-1.8,;t t
+s,@AUTOCONF@,${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run autoconf,;t t
+s,@AUTOMAKE@,${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run automake-1.8,;t t
+s,@AUTOHEADER@,${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run autoheader,;t t
+s,@MAKEINFO@,${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run makeinfo,;t t
+s,@AMTAR@,${SHELL} /home/whats/code/tools/ucl/acconfig/missing --run tar,;t t
+s,@install_sh@,/home/whats/code/tools/ucl/acconfig/install-sh,;t t
 s,@STRIP@,strip,;t t
 s,@ac_ct_STRIP@,strip,;t t
 s,@INSTALL_STRIP_PROGRAM@,${SHELL} $(install_sh) -c -s,;t t
@@ -558,7 +558,7 @@ s,@ac_ct_F77@,gfortran,;t t
 s,@LIBTOOL@,$(SHELL) $(top_builddir)/libtool,;t t
 s,@UCL_USE_ASM_TRUE@,,;t t
 s,@UCL_USE_ASM_FALSE@,#,;t t
-s,@UCL_ASM_VPATH@,:/home/whats/Desktop/tools/ucl/asm/i386/src_gas,;t t
+s,@UCL_ASM_VPATH@,:/home/whats/code/tools/ucl/asm/i386/src_gas,;t t
 s,@UCL_CPPFLAGS@,,;t t
 s,@UCL_EXTRA_CPPFLAGS@,,;t t
 s,@UCL_CFLAGS@,,;t t
